@@ -19,7 +19,12 @@ Build iOS static libraries:
 
 ## Android
 
-Update `ndk.dir` in [local.properties](projects/android/TodoApp/local.properties)
+Set paths to SDK locations:
+
+    $ export PROPERTIES_FILE=./projects/android/local.properties
+    $ touch $PROPERTIES_FILE
+    $ echo "sdk.dir=<ANDROID_SDK_DIRECTORY>" > $PROPERTIES_FILE
+    $ echo "ndk.dir=<ANDROID_NDK_DIRECTORY>" > $PROPERTIES_FILE
 
 Build Android shared libraries:
 
