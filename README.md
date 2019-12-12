@@ -6,6 +6,16 @@ Build C libraries & generation type definitions from IDL:
 
     $ make core
 
+## CLI
+
+Build: 
+
+    $ make cli
+
+Run:
+
+    $ make cli-exec
+
 ## iOS
 
 Set XCode custom path value with your signing certificate ID:
@@ -23,7 +33,7 @@ Open & boot a simulator:
 
 Deploy build to simulator:
 
-    $ make ios-run
+    $ make ios-exec
 
 ## Android
 
