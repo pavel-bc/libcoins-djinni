@@ -47,11 +47,14 @@ cli-exec:
 simulator:
 	open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
 
-emulator:
-	emulator -avd Pixel_2_API_28
+virtual-device:
+	echo no | avdmanager -s create avd -n Pixel --device pixel -k "system-images;android-28;google_apis_playstore;x86"
 
-ios-install:
+emulator:
+	emulator -avd Pixel
+
+install-ios:
 	xcrun simctl install booted $(PRODUCTS_DIR)/Debug-iphonesimulator/TodoApp.app
 
-android-install:
+install-android:
 	adb install $(PROJECT_ANDROID)/app/build/outputs/apk/debug/app-debug.apk

@@ -28,23 +28,27 @@ Open & boot a simulator:
 
 Install app to device:
 
-    $ make ios-install
+    $ make install-ios
 
 ## Android
 
 Set environment variables to correct SDK/NDK locations:
 
-    * `ANDROID_SDK_ROOT`
-    * `ANDROID_NDK_ROOT`
+- `ANDROID_SDK_ROOT`
+- `ANDROID_NDK_ROOT`
 
 Build Android shared libraries:
 
     $ make android
 
-Run Android emulator:
+Create Android virtual device (if necessary):
+
+    $ make virtual-device
+
+Boot Android emulator:
 
     $ make emulator
 
 Install app to device:
 
-    $ make android-install
+    $ make install-android
