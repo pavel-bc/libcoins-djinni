@@ -24,11 +24,11 @@ Build iOS static libraries:
 
 Open & boot a simulator:
 
-    $ make ios-simulator
+    $ make simulator
 
-Deploy build to simulator:
+Install app to device:
 
-    $ make ios-exec
+    $ make ios-install
 
 ## Android
 
@@ -41,3 +41,11 @@ Set correct paths to SDK locations:
 Build Android shared libraries:
 
     $ make android
+
+Run Android emulator:
+
+    $ make emulator
+
+Install app to device:
+
+    $ make android-install
