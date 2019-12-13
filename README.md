@@ -32,11 +32,10 @@ Install app to device:
 
 ## Android
 
-Set correct paths to SDK locations:
+Set environment variables to correct SDK/NDK locations:
 
-    $ export PROPERTIES_FILE=./projects/android/local.properties
-    $ echo "sdk.dir=<ANDROID_SDK_DIRECTORY>" >> $PROPERTIES_FILE
-    $ echo "ndk.dir=<ANDROID_NDK_DIRECTORY>" >> $PROPERTIES_FILE
+    * `ANDROID_SDK_ROOT`
+    * `ANDROID_NDK_ROOT`
 
 Build Android shared libraries:
 
