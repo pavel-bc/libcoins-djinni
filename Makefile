@@ -58,3 +58,6 @@ install-ios:
 
 install-android:
 	adb install $(PROJECT_ANDROID)/app/build/outputs/apk/debug/app-debug.apk
+
+verify:
+	@which adb avdmanager emulator ndk-build

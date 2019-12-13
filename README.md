@@ -37,6 +37,10 @@ Set environment variables to correct SDK/NDK locations:
 - `ANDROID_SDK_ROOT`
 - `ANDROID_NDK_ROOT`
 
+Verify you have all necessary tools in your `PATH`:
+
+    $ make verify
+
 Build Android shared libraries:
 
     $ make android
