@@ -18,11 +18,6 @@ Run:
 
 ## iOS
 
-Set XCode custom path value with your signing certificate ID:
-
-    $ defaults write com.apple.dt.Xcode IDEApplicationwideBuildSettings -dict-add DEVELOPMENT_TEAM <MY_CERTIFICATE_ID>
-    $ defaults write com.apple.dt.Xcode IDESourceTreeDisplayNames -dict-add DEVELOPMENT_TEAM "Development Team"
-
 Build iOS static libraries:
 
     $ make ios
