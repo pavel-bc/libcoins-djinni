@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <script src="build/asmjs/index.js"></script>
+    <script>
+        Module.onRuntimeInitialized = function() {
+            document.writeln(Module.api_encode("Hello World"));
+        }
+    </script>
+  </body>
+</html>
