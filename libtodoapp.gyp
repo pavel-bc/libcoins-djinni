@@ -6,6 +6,7 @@
       "dependencies": [
         "./deps/djinni/support-lib/support_lib.gyp:djinni_objc",
         "./deps/sqlite3.gyp:sqlite3",
+        "./deps/base32.gyp:base32",
       ],
       "sources": [
         "<!@(python deps/djinni/example/glob.py generated-src/objc  '*.cpp' '*.mm' '*.m')",
@@ -24,6 +25,7 @@
       "dependencies": [
         "deps/djinni/support-lib/support_lib.gyp:djinni_jni",
         "deps/sqlite3.gyp:sqlite3",
+        "deps/base32.gyp:base32",
       ],
       "ldflags" : [ "-llog", "-Wl,--build-id,--gc-sections,--exclude-libs,ALL" ],
       "sources": [

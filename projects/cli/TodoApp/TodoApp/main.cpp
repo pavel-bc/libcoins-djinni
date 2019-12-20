@@ -2,7 +2,6 @@
 #include "todo.hpp"
 
 #include <stdio.h>
-#include <sqlite3.h>
 #include <string>
 #include "todo_list_impl.hpp"
 

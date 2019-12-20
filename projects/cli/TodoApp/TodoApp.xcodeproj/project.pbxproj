@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E97E035023ABC36E00C7DB25 /* libbase32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97E034F23ABC36E00C7DB25 /* libbase32.a */; };
+		E97E035223ABC37000C7DB25 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97E035123ABC37000C7DB25 /* libsqlite3.a */; };
 		E9F2D6D023A287F5002613F9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D6CF23A287F5002613F9 /* main.cpp */; };
 		E9F2D6E623A28B22002613F9 /* todo_list_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D6E523A28B22002613F9 /* todo_list_impl.cpp */; };
-		E9F2D6EC23A28BBC002613F9 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F2D6EB23A28BBC002613F9 /* libsqlite3.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,13 +27,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E97E034F23ABC36E00C7DB25 /* libbase32.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libbase32.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97E035123ABC37000C7DB25 /* libsqlite3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsqlite3.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F2D6CC23A287F5002613F9 /* TodoApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TodoApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F2D6CF23A287F5002613F9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E9F2D6E223A28B0F002613F9 /* todo_list.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = todo_list.hpp; path = "../../../../generated-src/cpp/todo_list.hpp"; sourceTree = "<group>"; };
 		E9F2D6E323A28B0F002613F9 /* todo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = todo.hpp; path = "../../../../generated-src/cpp/todo.hpp"; sourceTree = "<group>"; };
 		E9F2D6E423A28B22002613F9 /* todo_list_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = todo_list_impl.hpp; path = ../../../../src/todo_list_impl.hpp; sourceTree = "<group>"; };
 		E9F2D6E523A28B22002613F9 /* todo_list_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = todo_list_impl.cpp; path = ../../../../src/todo_list_impl.cpp; sourceTree = "<group>"; };
-		E9F2D6EB23A28BBC002613F9 /* libsqlite3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsqlite3.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9F2D6EC23A28BBC002613F9 /* libsqlite3.a in Frameworks */,
+				E97E035023ABC36E00C7DB25 /* libbase32.a in Frameworks */,
+				E97E035223ABC37000C7DB25 /* libsqlite3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +82,8 @@
 		E9F2D6E723A28BAA002613F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E9F2D6EB23A28BBC002613F9 /* libsqlite3.a */,
+				E97E034F23ABC36E00C7DB25 /* libbase32.a */,
+				E97E035123ABC37000C7DB25 /* libsqlite3.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,6 +203,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)../../../../deps/base32";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -251,9 +256,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)../../../../deps/base32";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -264,7 +271,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)../../../../deps/base32";
 			};
 			name = Debug;
 		};
@@ -274,7 +284,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)../../../../deps/base32";
 			};
 			name = Release;
 		};

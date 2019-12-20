@@ -2,7 +2,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <sqlite3.h>
+#include "sqlite3.h"
+#include "base32.h"
   
 namespace todolist {
     
@@ -37,10 +38,16 @@ namespace todolist {
                     int32_t id = sqlite3_column_int(statement, 0);
                     std::string label = (char*)sqlite3_column_text(statement, 1);
                     int32_t completed = sqlite3_column_int(statement, 2);
-                    
+
+                    // Base32 of label
+                    const char* in = label.c_str();
+                    char buffer[64];
+                    base32_encode((uint8_t *)in, sizeof(BASE32_ALPHABET_RFC4648), buffer, sizeof(buffer), BASE32_ALPHABET_RFC4648);
+                    std::string labelEnc(buffer);
+
                     Todo temp_todo = {
                         id,
-                        label,
+                        labelEnc,
                         completed
                     };
                     todos.push_back(temp_todo);

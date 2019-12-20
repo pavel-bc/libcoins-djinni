@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E97E035E23ABC60400C7DB25 /* libbase32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97E035D23ABC60400C7DB25 /* libbase32.a */; };
 		E9F2D6FB23A28ED7002613F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D6FA23A28ED7002613F9 /* AppDelegate.m */; };
 		E9F2D6FE23A28ED7002613F9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D6FD23A28ED7002613F9 /* SceneDelegate.m */; };
 		E9F2D70123A28ED7002613F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D70023A28ED7002613F9 /* ViewController.m */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E97E035D23ABC60400C7DB25 /* libbase32.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libbase32.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F2D6F623A28ED7002613F9 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F2D6F923A28ED7002613F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9F2D6FA23A28ED7002613F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E97E035E23ABC60400C7DB25 /* libbase32.a in Frameworks */,
 				E9F2D72223A29047002613F9 /* libtodoapp_objc.a in Frameworks */,
 				E9F2D72423A29047002613F9 /* libsqlite3.a in Frameworks */,
 				E9F2D72623A29047002613F9 /* libdjinni_objc.a in Frameworks */,
@@ -94,6 +97,7 @@
 		E9F2D72023A29047002613F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E97E035D23ABC60400C7DB25 /* libbase32.a */,
 				E9F2D72123A29047002613F9 /* libtodoapp_objc.a */,
 				E9F2D72323A29047002613F9 /* libsqlite3.a */,
 				E9F2D72523A29047002613F9 /* libdjinni_objc.a */,
@@ -328,6 +332,7 @@
 					"$(SRCROOT)/../../../generated-src/objc",
 					"$(SRCROOT)/../../../deps/djinni/support-lib/objc",
 					"$(SRCROOT)/../../../deps/sqlite3",
+					"$(SRCROOT)/../../../deps/base32",
 				);
 			};
 			name = Debug;
@@ -349,6 +354,7 @@
 					"$(SRCROOT)/../../../generated-src/objc",
 					"$(SRCROOT)/../../../deps/djinni/support-lib/objc",
 					"$(SRCROOT)/../../../deps/sqlite3",
+					"$(SRCROOT)/../../../deps/base32",
 				);
 			};
 			name = Release;

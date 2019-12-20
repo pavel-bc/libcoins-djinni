@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../build_ios/deps/base32.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../../../build_ios/deps/sqlite3.xcodeproj">
    </FileRef>
    <FileRef

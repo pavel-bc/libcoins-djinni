@@ -5,6 +5,9 @@
       location = "container:TodoApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../../../build_ios/deps/base32.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../../../build_ios/deps/djinni/support-lib/support_lib.xcodeproj">
    </FileRef>
    <FileRef

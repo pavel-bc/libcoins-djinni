@@ -31,11 +31,17 @@ android: GypAndroid.mk
 	@python deps/djinni/example/glob.py ./ '*.apk'
 
 # Cleanup
-clean: clean-android
-	rm -rf ./build_ios 
+clean: clean-android clean-ios
+	rm -rf ./todo.db
 	rm -rf ./generated-src
 
+clean-ios:
+	rm -rf ./build_ios 
+	rm -rf $(BUILD_DIR)
+
 clean-android:
+	rm -rf ./GypAndroid.mk
+	rm -rf libtodoapp_jni.target.mk
 	cd $(PROJECT_ANDROID) && sh ./gradlew clean
 	cd $(PROJECT_ANDROID) && rm -rf ./build
 	cd $(PROJECT_ANDROID) && rm -rf ./app/build
