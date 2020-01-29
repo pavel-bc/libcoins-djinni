@@ -1,29 +1,33 @@
 # Directories
 BUILD_DIR       = ./DerivedData
 PRODUCTS_DIR    = $(BUILD_DIR)/Build/Products
-PROJECT_CLI		= ./projects/cli/TodoApp
-PROJECT_ANDROID = ./projects/android/TodoApp
+PROJECT_CLI		= ./projects/cli/DemoApp
+PROJECT_ANDROID = ./projects/android/DemoApp
 PROJECT_IOS 	= ./projects/ios/TodoApp
 NDK_LOCATION    = $(shell dirname `which ndk-build`)
 
 # Core
-./build_ios/libtodoapp.xcodeproj: libtodoapp.gyp ./deps/djinni/support-lib/support_lib.gyp todolist.djinni
+./build_ios/libcoins.xcodeproj: libcoins.gyp ./deps/djinni/support-lib/support_lib.gyp libcoins.djinni
 	sh ./run_djinni.sh
-	deps/gyp/gyp --depth=. -f xcode -DOS=ios --generator-output ./build_ios -Ideps/djinni/common.gypi ./libtodoapp.gyp
+	deps/gyp/gyp --depth=. -f xcode -DOS=ios --generator-output ./build_ios -Ideps/djinni/common.gypi ./libcoins.gyp
 
-core: ./build_ios/libtodoapp.xcodeproj
+./build_osx/libcoins.xcodeproj: libcoins.gyp ./deps/djinni/support-lib/support_lib.gyp libcoins.djinni
+	sh ./run_djinni.sh
+	deps/gyp/gyp --depth=. -f xcode -DOS=mac --generator-output ./build_mac -Ideps/djinni/common.gypi ./libcoins.gyp
+
+core: ./build_ios/libcoins.xcodeproj ./build_osx/libcoins.xcodeproj
 
 # iOS & OSX
-cli:
-	xcodebuild -workspace $(PROJECT_CLI)/TodoApp.xcworkspace -scheme TodoApp -configuration 'Debug' -sdk macosx -derivedDataPath $(BUILD_DIR)
+cli: ./build_osx/libcoins.xcodeproj
+	xcodebuild -workspace $(PROJECT_CLI)/DemoApp.xcworkspace -scheme DemoApp -configuration 'Debug' -sdk macosx -derivedDataPath $(BUILD_DIR)
 
-ios: ./build_ios/libtodoapp.xcodeproj
+ios: ./build_ios/libcoins.xcodeproj
 	xcodebuild -workspace $(PROJECT_IOS)/TodoApp.xcworkspace -scheme TodoApp -configuration 'Debug' -sdk iphonesimulator -derivedDataPath $(BUILD_DIR)
 
 # Android
-GypAndroid.mk: libtodoapp.gyp ./deps/djinni/support-lib/support_lib.gyp todolist.djinni
+GypAndroid.mk: libcoins.gyp ./deps/djinni/support-lib/support_lib.gyp libcoins.djinni
 	sh ./run_djinni.sh
-	ANDROID_BUILD_TOP=$(NDK_LOCATION) deps/gyp/gyp --depth=. -f android -DOS=android -Ideps/djinni/common.gypi ./libtodoapp.gyp --root-target=libtodoapp_jni
+	ANDROID_BUILD_TOP=$(NDK_LOCATION) deps/gyp/gyp --depth=. -f android -DOS=android -Ideps/djinni/common.gypi ./libcoins.gyp --root-target=libcoins_jni
 
 android: GypAndroid.mk
 	cd $(PROJECT_ANDROID) && ./gradlew app:assembleDebug
@@ -31,24 +35,23 @@ android: GypAndroid.mk
 	@python deps/djinni/example/glob.py ./ '*.apk'
 
 # Cleanup
-clean: clean-android clean-ios
-	rm -rf ./todo.db
+clean:
+	rm -rf ./build_ios
+	rm -rf ./build_osx
 	rm -rf ./generated-src
-
-clean-ios:
-	rm -rf ./build_ios 
+	rm -rf ./GypAndroid.mk
+	rm -rf libcoins_jni.target.mk		
 	rm -rf $(BUILD_DIR)
 
-clean-android:
-	rm -rf ./GypAndroid.mk
-	rm -rf libtodoapp_jni.target.mk
-	cd $(PROJECT_ANDROID) && sh ./gradlew clean
-	cd $(PROJECT_ANDROID) && rm -rf ./build
+clean-gradle:
 	cd $(PROJECT_ANDROID) && rm -rf ./app/build
+	cd $(PROJECT_ANDROID) && rm -rf ./app/libs
+	cd $(PROJECT_ANDROID) && rm -rf ./app/obj
+	cd $(PROJECT_ANDROID) && sh ./gradlew clean
 
 # Run shortcuts
 cli-exec:
-	$(PRODUCTS_DIR)/Debug/TodoApp
+	$(PRODUCTS_DIR)/Debug/DemoApp
 
 simulator:
 	open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E97E035E23ABC60400C7DB25 /* libbase32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97E035D23ABC60400C7DB25 /* libbase32.a */; };
+		E92D8EE923E0B23500454506 /* libcoins_objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E92D8EE823E0B23500454506 /* libcoins_objc.a */; };
+		E9C0C0C923DF397D00B678AB /* libtrezor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C0C0C823DF397D00B678AB /* libtrezor.a */; };
 		E9F2D6FB23A28ED7002613F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D6FA23A28ED7002613F9 /* AppDelegate.m */; };
 		E9F2D6FE23A28ED7002613F9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D6FD23A28ED7002613F9 /* SceneDelegate.m */; };
 		E9F2D70123A28ED7002613F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D70023A28ED7002613F9 /* ViewController.m */; };
@@ -15,14 +16,13 @@
 		E9F2D70623A28EDA002613F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F2D70523A28EDA002613F9 /* Assets.xcassets */; };
 		E9F2D70923A28EDA002613F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F2D70723A28EDA002613F9 /* LaunchScreen.storyboard */; };
 		E9F2D70C23A28EDA002613F9 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D70B23A28EDA002613F9 /* main.mm */; };
-		E9F2D72223A29047002613F9 /* libtodoapp_objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F2D72123A29047002613F9 /* libtodoapp_objc.a */; };
-		E9F2D72423A29047002613F9 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F2D72323A29047002613F9 /* libsqlite3.a */; };
 		E9F2D72623A29047002613F9 /* libdjinni_objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F2D72523A29047002613F9 /* libdjinni_objc.a */; };
 		E9F2D72923A2939C002613F9 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F2D72823A2939C002613F9 /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E97E035D23ABC60400C7DB25 /* libbase32.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libbase32.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92D8EE823E0B23500454506 /* libcoins_objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcoins_objc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9C0C0C823DF397D00B678AB /* libtrezor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libtrezor.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F2D6F623A28ED7002613F9 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F2D6F923A28ED7002613F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9F2D6FA23A28ED7002613F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,8 +35,6 @@
 		E9F2D70823A28EDA002613F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9F2D70A23A28EDA002613F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9F2D70B23A28EDA002613F9 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
-		E9F2D72123A29047002613F9 /* libtodoapp_objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libtodoapp_objc.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9F2D72323A29047002613F9 /* libsqlite3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsqlite3.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F2D72523A29047002613F9 /* libdjinni_objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libdjinni_objc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F2D72723A2939C002613F9 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		E9F2D72823A2939C002613F9 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
@@ -47,10 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E97E035E23ABC60400C7DB25 /* libbase32.a in Frameworks */,
-				E9F2D72223A29047002613F9 /* libtodoapp_objc.a in Frameworks */,
-				E9F2D72423A29047002613F9 /* libsqlite3.a in Frameworks */,
+				E9C0C0C923DF397D00B678AB /* libtrezor.a in Frameworks */,
 				E9F2D72623A29047002613F9 /* libdjinni_objc.a in Frameworks */,
+				E92D8EE923E0B23500454506 /* libcoins_objc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,9 +94,8 @@
 		E9F2D72023A29047002613F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E97E035D23ABC60400C7DB25 /* libbase32.a */,
-				E9F2D72123A29047002613F9 /* libtodoapp_objc.a */,
-				E9F2D72323A29047002613F9 /* libsqlite3.a */,
+				E92D8EE823E0B23500454506 /* libcoins_objc.a */,
+				E9C0C0C823DF397D00B678AB /* libtrezor.a */,
 				E9F2D72523A29047002613F9 /* libdjinni_objc.a */,
 			);
 			name = Frameworks;
@@ -208,7 +204,7 @@
 		E9F2D70D23A28EDA002613F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -258,7 +254,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -266,7 +262,7 @@
 		E9F2D70E23A28EDA002613F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -310,6 +306,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -331,8 +328,7 @@
 				USER_HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../generated-src/objc",
 					"$(SRCROOT)/../../../deps/djinni/support-lib/objc",
-					"$(SRCROOT)/../../../deps/sqlite3",
-					"$(SRCROOT)/../../../deps/base32",
+					"$(SRCROOT)/../../../deps/trezor",
 				);
 			};
 			name = Debug;
@@ -353,8 +349,7 @@
 				USER_HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../generated-src/objc",
 					"$(SRCROOT)/../../../deps/djinni/support-lib/objc",
-					"$(SRCROOT)/../../../deps/sqlite3",
-					"$(SRCROOT)/../../../deps/base32",
+					"$(SRCROOT)/../../../deps/trezor",
 				);
 			};
 			name = Release;

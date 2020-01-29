@@ -5,10 +5,10 @@
       location = "group:../../../../build_ios/deps/djinni/support-lib/support_lib.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../../../build_ios/deps/sqlite3.xcodeproj">
+      location = "group:../../../../build_ios/deps/trezor.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../../../build_ios/libtodoapp.xcodeproj">
+      location = "group:../../../../build_ios/libcoins.xcodeproj">
    </FileRef>
    <FileRef
       location = "self:TodoApp.xcodeproj">

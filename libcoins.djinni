@@ -1,0 +1,11 @@
+todo = record {
+    id: i32;
+    label: string;
+    completed: i32;
+}
+
+todo_list = interface +c {
+    static create(): todo_list;
+    get_todos(): list<todo>;
+    delete_todo(id: i32): bool;
+}
