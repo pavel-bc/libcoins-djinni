@@ -1,11 +1,11 @@
 {
   "targets": [
     {
-      "target_name": "libcoins_objc",
+      "target_name": "libcoins_obj",
       "type": "static_library",
       "dependencies": [
-        "./deps/djinni/support-lib/support_lib.gyp:djinni_objc",
-        "./deps/trezor.gyp:trezor"
+        "deps/djinni/support-lib/support_lib.gyp:djinni_objc",
+        "deps/trezor.gyp:trezor"
       ],
       "sources": [
         "<!@(python deps/djinni/example/glob.py generated-src/objc  '*.cpp' '*.mm' '*.m')",

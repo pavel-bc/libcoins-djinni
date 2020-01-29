@@ -1,7 +1,7 @@
 # Directories
 BUILD_DIR       = ./DerivedData
 PRODUCTS_DIR    = $(BUILD_DIR)/Build/Products
-PROJECT_CLI		= ./projects/cli/DemoApp
+PROJECT_OSX		= ./projects/osx/DemoApp
 PROJECT_ANDROID = ./projects/android/DemoApp
 PROJECT_IOS 	= ./projects/ios/TodoApp
 NDK_LOCATION    = $(shell dirname `which ndk-build`)
@@ -13,13 +13,13 @@ NDK_LOCATION    = $(shell dirname `which ndk-build`)
 
 ./build_osx/libcoins.xcodeproj: libcoins.gyp ./deps/djinni/support-lib/support_lib.gyp libcoins.djinni
 	sh ./run_djinni.sh
-	deps/gyp/gyp --depth=. -f xcode -DOS=mac --generator-output ./build_mac -Ideps/djinni/common.gypi ./libcoins.gyp
+	deps/gyp/gyp --depth=. -f xcode -DOS=mac --generator-output ./build_osx -Ideps/djinni/common.gypi ./libcoins.gyp
 
 core: ./build_ios/libcoins.xcodeproj ./build_osx/libcoins.xcodeproj
 
 # iOS & OSX
 cli: ./build_osx/libcoins.xcodeproj
-	xcodebuild -workspace $(PROJECT_CLI)/DemoApp.xcworkspace -scheme DemoApp -configuration 'Debug' -sdk macosx -derivedDataPath $(BUILD_DIR)
+	xcodebuild -workspace $(PROJECT_OSX)/DemoApp.xcworkspace -scheme DemoApp -configuration 'Debug' -sdk macosx -derivedDataPath $(BUILD_DIR)
 
 ios: ./build_ios/libcoins.xcodeproj
 	xcodebuild -workspace $(PROJECT_IOS)/TodoApp.xcworkspace -scheme TodoApp -configuration 'Debug' -sdk iphonesimulator -derivedDataPath $(BUILD_DIR)
